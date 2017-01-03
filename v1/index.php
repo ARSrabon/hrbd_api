@@ -110,6 +110,38 @@ $app->post('/register', function() use ($app) {
 
 
 /**
+ * Updating existing task
+ * method PUT
+ * params task, status
+ * url - /tasks/:id
+ */
+$app->put('/user/:user_id', function($task_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('user_id','Username','fullName','email','mobile_no','address','city','area'));
+
+    global $user_id;
+    $task = $app->request->put('task');
+    $status = $app->request->put('status');
+
+    $db = new DbHandler();
+    $response = array();
+
+    // updating task
+    $result = $db->updateTask($user_id, $task_id, $task, $status);
+    if ($result) {
+        // task updated successfully
+        $response["error"] = false;
+        $response["message"] = "Task updated successfully";
+    } else {
+        // task failed to update
+        $response["error"] = true;
+        $response["message"] = "Task failed to update. Please try again!";
+    }
+    echoRespnse(200, $response);
+});
+
+
+/**
  * Echoing json response to client
  * @param String $status_code Http response code
  * @param Int $response Json response

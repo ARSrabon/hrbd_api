@@ -108,7 +108,7 @@ class DbHandler
      */
     public function getUserByUID($user_id)
     {
-        $stmt = $this->conn->prepare("SELECT Username,fulName,mobile_no FROM users WHERE user_id = ?");
+        $stmt = $this->conn->prepare("SELECT * FROM users WHERE user_id = ?");
         $stmt->bind_param("s", $user_id);
         if ($stmt->execute()) {
             $user = $stmt->get_result()->fetch_assoc();
@@ -124,13 +124,45 @@ class DbHandler
      * @param String $user_id user id to whom task belongs to
      * @param String $task task text
      */
-    public function createTask($user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking, $rentPrice,
+    public function createRentalAd($user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking, $rentPrice,
                                $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two)
     {
         $stmt = $this->conn->prepare("INSERT INTO rents(user_id,area_id,city_id,banner,beds,baths,floorDeatils,lift,
                                                   parking,rentPrice,rentDetails,location,Address,img_banner,img_other_one,img_other_two) 
-                                                  VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param("ssssssssssssss", $user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking, $rentPrice,
+                                                  VALUES(?,$area_id,$city_id,?,?,?,?,$lift,$parking,?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssssssss", $user_id, $banner, $beds, $baths, $floorDetails, $rentPrice,
+            $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two);
+        $result = $stmt->execute();
+        $stmt->close();
+
+        if ($result) {
+            return $result;
+        } else {
+            // task failed to create
+            return NULL;
+        }
+    }
+
+    public function getRentalAds($ratings) {
+        $stmt = $this->conn->prepare("SELECT t.id, t.task, t.status, t.created_at from tasks t, user_tasks ut WHERE t.id = ? AND ut.task_id = t.id AND ut.user_id = ?");
+        $stmt->bind_param("ii", $task_id, $user_id);
+        if ($stmt->execute()) {
+            $task = $stmt->get_result()->fetch_assoc();
+            $stmt->close();
+            return $task;
+        } else {
+            return NULL;
+        }
+    }
+
+
+    public function updateRentalAd($user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking, $rentPrice,
+                               $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two)
+    {
+        $stmt = $this->conn->prepare("INSERT INTO rents(user_id,area_id,city_id,banner,beds,baths,floorDeatils,lift,
+                                                  parking,rentPrice,rentDetails,location,Address,img_banner,img_other_one,img_other_two) 
+                                                  VALUES(?,$area_id,$city_id,?,?,?,?,$lift,$parking,?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssssssss", $user_id, $banner, $beds, $baths, $floorDetails, $rentPrice,
             $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two);
         $result = $stmt->execute();
         $stmt->close();
@@ -138,15 +170,16 @@ class DbHandler
         if ($result) {
             // task row created
             // now assign the task to user
-            $new_task_id = $this->conn->insert_id;
-            $res = $this->createUserTask($user_id, $new_task_id);
-            if ($res) {
-                // task created successfully
-                return $new_task_id;
-            } else {
-                // task failed to create
-                return NULL;
-            }
+//            $new_task_id = $this->conn->insert_id;
+//            $res = $this->createUserTask($user_id, $new_task_id);
+//            if ($res) {
+//                // task created successfully
+//                return $new_task_id;
+//            } else {
+//                // task failed to create
+//                return NULL;
+//            }
+            return $result;
         } else {
             // task failed to create
             return NULL;

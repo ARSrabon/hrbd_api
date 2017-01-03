@@ -15,27 +15,29 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DbHandler.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DbHandler.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="55" column="45" lean-forward="true" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+            <state relative-caret-position="310">
+              <caret line="145" column="41" lean-forward="false" selection-start-line="145" selection-start-column="41" selection-end-line="145" selection-end-column="41" />
               <folding>
-                <marker date="1483476014542" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-                <marker date="1483476014542" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-                <marker date="1483476014542" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-                <marker date="1483476014542" expanded="true" signature="3064:3126" ph="SELECT Usern... users" />
-                <marker date="1483476014542" expanded="true" signature="3797:4103" ph="INSERT INTO rent... " />
+                <marker date="1483477549566" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+                <marker date="1483477549566" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+                <marker date="1483477549566" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+                <marker date="1483477549566" expanded="true" signature="3064:3101" ph="SELECT Usern... users" />
+                <marker date="1483477549566" expanded="true" signature="3776:4107" ph="INSERT INTO rent... " />
+                <marker date="1483477549566" expanded="true" signature="4596:4723" ph="SELECT t.id,... tasks" />
+                <marker date="1483477549566" expanded="true" signature="5270:5601" ph="INSERT INTO rents... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="-375">
+              <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -83,6 +85,16 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbd_api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbd_api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="hrbd_api" />
@@ -229,12 +241,12 @@
       <updated>1483452854605</updated>
       <workItem from="1483452857304" duration="13218000" />
       <workItem from="1483473054700" duration="1741000" />
-      <workItem from="1483475737147" duration="472000" />
+      <workItem from="1483475737147" duration="1812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15431000" />
+    <option name="totallyTimeSpent" value="16771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="21" width="1366" height="747" extended-state="6" />
@@ -268,7 +280,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1566618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15634441" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -294,11 +306,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483476014542" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1483476014542" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1483476014542" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1483476014542" expanded="true" signature="3064:3126" ph="SELECT Usern... users" />
-            <marker date="1483476014542" expanded="true" signature="3797:4103" ph="INSERT INTO rent... " />
+            <marker date="1483477549566" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1483477549566" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1483477549566" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1483477549566" expanded="true" signature="3064:3101" ph="SELECT Usern... users" />
+            <marker date="1483477549566" expanded="true" signature="3776:4107" ph="INSERT INTO rent... " />
+            <marker date="1483477549566" expanded="true" signature="4596:4723" ph="SELECT t.id,... tasks" />
+            <marker date="1483477549566" expanded="true" signature="5270:5601" ph="INSERT INTO rents... " />
           </folding>
         </state>
       </provider>
@@ -316,11 +330,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483476014542" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1483476014542" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1483476014542" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1483476014542" expanded="true" signature="3064:3126" ph="SELECT Usern... users" />
-            <marker date="1483476014542" expanded="true" signature="3797:4103" ph="INSERT INTO rent... " />
+            <marker date="1483477549566" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1483477549566" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1483477549566" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1483477549566" expanded="true" signature="3064:3101" ph="SELECT Usern... users" />
+            <marker date="1483477549566" expanded="true" signature="3776:4107" ph="INSERT INTO rent... " />
+            <marker date="1483477549566" expanded="true" signature="4596:4723" ph="SELECT t.id,... tasks" />
+            <marker date="1483477549566" expanded="true" signature="5270:5601" ph="INSERT INTO rents... " />
           </folding>
         </state>
       </provider>
@@ -399,25 +415,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
+    <entry file="file://$PROJECT_DIR$/v1/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="55" column="45" lean-forward="true" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-          <folding>
-            <marker date="1483476014542" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1483476014542" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1483476014542" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1483476014542" expanded="true" signature="3064:3126" ph="SELECT Usern... users" />
-            <marker date="1483476014542" expanded="true" signature="3797:4103" ph="INSERT INTO rent... " />
-          </folding>
+        <state relative-caret-position="-375">
+          <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v1/index.php">
+    <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="310">
+          <caret line="145" column="41" lean-forward="false" selection-start-line="145" selection-start-column="41" selection-end-line="145" selection-end-column="41" />
+          <folding>
+            <marker date="1483477549566" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1483477549566" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1483477549566" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1483477549566" expanded="true" signature="3064:3101" ph="SELECT Usern... users" />
+            <marker date="1483477549566" expanded="true" signature="3776:4107" ph="INSERT INTO rent... " />
+            <marker date="1483477549566" expanded="true" signature="4596:4723" ph="SELECT t.id,... tasks" />
+            <marker date="1483477549566" expanded="true" signature="5270:5601" ph="INSERT INTO rents... " />
+          </folding>
         </state>
       </provider>
     </entry>

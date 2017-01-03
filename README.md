@@ -1,2 +1,2 @@
 # hrbd_api
-This a PHP CRUD API for HomeRentalBD Android App
+This is a PHP CRUD API for HomeRentalBD Android App.
