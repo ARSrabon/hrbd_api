@@ -120,20 +120,32 @@ class DbHandler
     }
 
     /**
+     * Fetching all user tasks
+     * @param String $user_id id of the user
+     */
+    public function getAllUserRents($user_id)
+    {
+        $sql = "SELECT * FROM rents WHERE user_id = '$user_id'";
+        $tasks = $this->conn->query($sql);
+        return $tasks;
+    }
+
+
+    /**
      * Creating new rent
      * @param String $user_id user id to whom task belongs to
      * @param String $task task text
      */
     public function createRentalAd($user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking, $rentPrice,
-                               $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two)
+                                   $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two)
     {
-        $stmt = $this->conn->prepare("INSERT INTO rents(user_id,area_id,city_id,banner,beds,baths,floorDeatils,lift,
+        $sql = "INSERT INTO rents(user_id,area_id,banner,beds,baths,floorDeatils,lift,
                                                   parking,rentPrice,rentDetails,location,Address,img_banner,img_other_one,img_other_two) 
-                                                  VALUES(?,$area_id,$city_id,?,?,?,?,$lift,$parking,?,?,?,?,?,?,?)");
-        $stmt->bind_param("ssssssssss", $user_id, $banner, $beds, $baths, $floorDetails, $rentPrice,
-            $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two);
-        $result = $stmt->execute();
-        $stmt->close();
+                                                  VALUES($user_id,$area_id,$banner,$beds,$baths,$floorDetails,
+                                                  $lift,$parking,$rentPrice,$rentDetails,$location,$Address,$img_banner,
+                                                  $img_other_one,$img_other_two)";
+
+        $result = $this->conn->query($sql);
 
         if ($result) {
             return $result;
@@ -143,45 +155,66 @@ class DbHandler
         }
     }
 
-    public function getRentalAds($ratings) {
-        $stmt = $this->conn->prepare("SELECT t.id, t.task, t.status, t.created_at from tasks t, user_tasks ut WHERE t.id = ? AND ut.task_id = t.id AND ut.user_id = ?");
-        $stmt->bind_param("ii", $task_id, $user_id);
-        if ($stmt->execute()) {
-            $task = $stmt->get_result()->fetch_assoc();
-            $stmt->close();
-            return $task;
+    public function getRentalAds()
+    {
+        $sql = "SELECT id,banner,area_id,rent_type_id,beds,size,rentprice,available,avgrating,reviews,img_banner 
+FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) as reviews FROM `reviews` GROUP BY rents_id)AS t2 ON rents.id = t2.rents_id ";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function getSingleRentalAds($rent_id)
+    {
+        $sql = " SELECT * FROM rents WHERE id = $rent_id";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
         } else {
             return NULL;
         }
     }
 
 
-    public function updateRentalAd($user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking, $rentPrice,
-                               $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two)
+    public function updateRentalAd($user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking,
+                                   $rentPrice, $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two)
     {
-        $stmt = $this->conn->prepare("INSERT INTO rents(user_id,area_id,city_id,banner,beds,baths,floorDeatils,lift,
+        $sql = "INSERT INTO rents(user_id,area_id,city_id,banner,beds,baths,floorDeatils,lift,
                                                   parking,rentPrice,rentDetails,location,Address,img_banner,img_other_one,img_other_two) 
-                                                  VALUES(?,$area_id,$city_id,?,?,?,?,$lift,$parking,?,?,?,?,?,?,?)");
-        $stmt->bind_param("ssssssssss", $user_id, $banner, $beds, $baths, $floorDetails, $rentPrice,
-            $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two);
-        $result = $stmt->execute();
-        $stmt->close();
+                                                  VALUES($user_id,$area_id,$city_id,$banner,$beds,$baths,$floorDetails,
+                                                  $lift,$parking,$rentPrice,$rentDetails,$location,$Address,$img_banner,
+                                                  $img_other_one,$img_other_two)";
 
+        $result = $this->conn->query($sql);
         if ($result) {
-            // task row created
-            // now assign the task to user
-//            $new_task_id = $this->conn->insert_id;
-//            $res = $this->createUserTask($user_id, $new_task_id);
-//            if ($res) {
-//                // task created successfully
-//                return $new_task_id;
-//            } else {
-//                // task failed to create
-//                return NULL;
-//            }
             return $result;
         } else {
             // task failed to create
+            return NULL;
+        }
+    }
+
+    public function createRentalAdReviews($rent_id,$user_id,$rating,$review)
+    {
+        $sql = "INSERT INTO reviews(rents_id,user_id,rating,review) VALUES($rent_id,'$user_id',$rating,'$review')";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function getSingleRentalAdReviews($rent_id)
+    {
+        $sql = " SELECT * FROM reviews WHERE rents_id = $rent_id";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
             return NULL;
         }
     }

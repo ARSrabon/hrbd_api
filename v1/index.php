@@ -71,9 +71,9 @@ function validateEmail($email)
  * method - POST
  * params - name, email, password
  */
-$app->post('/register', function() use ($app) {
+$app->post('/register', function () use ($app) {
     // check for required params
-    verifyRequiredParams(array('user_id','Username','fullName','email','mobile_no','address','city','area'));
+    verifyRequiredParams(array('user_id', 'Username', 'fullName', 'email', 'mobile_no', 'address', 'city', 'area'));
 
     $response = array();
 
@@ -91,7 +91,7 @@ $app->post('/register', function() use ($app) {
     validateEmail($email);
 
     $db = new DbHandler();
-    $res = $db->createUser($user_id,$Username,$fullName, $email,$mobile_no,$address,$city,$area);
+    $res = $db->createUser($user_id, $Username, $fullName, $email, $mobile_no, $address, $city, $area);
 
     if ($res == USER_CREATED_SUCCESSFULLY) {
         $response["error"] = false;
@@ -108,16 +108,12 @@ $app->post('/register', function() use ($app) {
     }
 });
 
-
 /**
- * Updating existing task
- * method PUT
- * params task, status
- * url - /tasks/:id
+ *
  */
-$app->put('/user/:user_id', function($task_id) use($app) {
+$app->put('/user/:user_id', function ($task_id) use ($app) {
     // check for required params
-    verifyRequiredParams(array('user_id','Username','fullName','email','mobile_no','address','city','area'));
+    verifyRequiredParams(array('user_id', 'Username', 'fullName', 'email', 'mobile_no', 'address', 'city', 'area'));
 
     global $user_id;
     $task = $app->request->put('task');
@@ -140,6 +136,172 @@ $app->put('/user/:user_id', function($task_id) use($app) {
     echoRespnse(200, $response);
 });
 
+/**
+ * Listing all rents of particual user
+ * method GET
+ * url /tasks
+ */
+$app->get('/userrents/:user_id', function ($user_id) {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getAllUserRents($user_id);
+
+    if ($result->num_rows > 0) {
+        $response["error"] = false;
+        $response["rents"] = array();
+
+        // looping through result and preparing tasks array
+        while ($task = $result->fetch_assoc()) {
+            $tmp = array();
+            $tmp["id"] = $task["id"];
+            $tmp["user_id"] = $task["user_id"];
+            $tmp["area_id"] = $task["area_id"];
+            $tmp["rentPrice"] = $task["rentPrice"];
+            array_push($response["rents"], $tmp);
+        }
+    } else {
+        $response["error"] = true;
+        $response["rents"] = array();
+    }
+
+
+    echoRespnse(200, $response);
+});
+
+/**
+ * Listing all tasks of particual user
+ * method GET
+ * url /tasks
+ */
+$app->get('/rents', function () {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getRentalAds();
+
+    $response["error"] = false;
+    $response["rents"] = array();
+
+//    array_push($response["rents"], $result);
+
+//     looping through result and preparing tasks array
+    while ($task = $result->fetch_assoc()) {
+        $tmp = array();
+        $tmp["id"] = $task["id"];
+        $tmp["area_id"] = $task["area_id"];
+        $tmp["rent_type_id"] = $task["rent_type_id"];
+        $tmp["banner"] = $task["banner"];
+        $tmp["beds"] = $task["beds"];
+        $tmp["size"] = $task["size"];
+        $tmp["available"] = $task["available"];
+        $tmp["avgrating"] = $task["avgrating"];
+        $tmp["reviews"] = $task["reviews"];
+        $tmp["img_banner"] = $task["img_banner"];
+        array_push($response["rents"], $tmp);
+    }
+
+
+
+    echoRespnse(200, $response);
+});
+
+/**
+ * Listing all tasks of particual user
+ * method GET
+ * url /tasks
+ */
+$app->get('/rents/:rent_id', function ($rent_id) {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getSingleRentalAds($rent_id);
+
+    $response["error"] = false;
+    $response["rents"] = array();
+
+    // looping through result and preparing tasks array
+    while ($task = $result->fetch_assoc()) {
+        $tmp = array();
+        $tmp["id"] = $task["id"];
+        $tmp["user_id"] = $task["user_id"];
+        $tmp["area_id"] = $task["area_id"];
+        $tmp["rentprice"] = $task["rentprice"];
+        array_push($response["rents"], $tmp);
+    }
+
+    echoRespnse(200, $response);
+});
+
+/**
+ * Create a review for rental AD
+ * method POST
+ * url /reviews
+ */
+$app->post('/reviews', function () use ($app) {
+    // check for required params
+    verifyRequiredParams(array('rents_id', 'user_id', 'rating', 'review'));
+
+    $response = array();
+
+    // reading post params
+    $user_id = $app->request->post('user_id');
+    $rents_id = $app->request->post('rents_id');
+    $ratings = $app->request->post('rating');
+    $reviews = $app->request->post('review');
+
+    $db = new DbHandler();
+    $res = $db->createRentalAdReviews($rents_id, $user_id, $ratings, $reviews);
+
+    if ($res) {
+        $response["error"] = false;
+        $response["message"] = "Review is added Successfully";
+        echoRespnse(201, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while adding review";
+        echoRespnse(200, $response);
+    }
+});
+
+
+/**
+ * Listing all tasks of particual user
+ * method GET
+ * url /tasks
+ */
+$app->get('/reviews/:rent_id', function ($rent_id) {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getSingleRentalAdReviews($rent_id);
+
+    if ($result->num_rows > 0) {
+        $response["error"] = false;
+        $response["review"] = array();
+
+        // looping through result and preparing tasks array
+        while ($task = $result->fetch_assoc()) {
+            $tmp = array();
+            $tmp["id"] = $task["id"];
+            $tmp["rents_id"] = $task["rents_id"];
+            $tmp["user_id"] = $task["user_id"];
+            $tmp["ratings"] = $task["ratings"];
+            $tmp["reviews"] = $task["reviews"];
+            array_push($response["review"], $tmp);
+        }
+    } else {
+        $response["error"] = true;
+        $response["review"] = array();
+    }
+
+    echoRespnse(200, $response);
+});
+
 
 /**
  * Echoing json response to client
@@ -159,7 +321,6 @@ function echoRespnse($status_code, $response)
 }
 
 $app->run();
-
 
 
 ?>
