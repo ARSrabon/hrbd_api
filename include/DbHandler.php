@@ -197,9 +197,20 @@ FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) 
         }
     }
 
-    public function createRentalAdReviews($rent_id,$user_id,$rating,$review)
+    public function createRentalAdReviews($rent_id, $user_id, $rating, $review)
     {
         $sql = "INSERT INTO reviews(rents_id,user_id,rating,review) VALUES($rent_id,'$user_id',$rating,'$review')";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function updateRentalAdReviews($review_id, $rating, $review)
+    {
+        $sql = "UPDATE reviews SET rating= $rating,review='$review' WHERE id= $review_id";
         $result = $this->conn->query($sql);
         if ($result) {
             return $result;
@@ -211,6 +222,82 @@ FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) 
     public function getSingleRentalAdReviews($rent_id)
     {
         $sql = " SELECT * FROM reviews WHERE rents_id = $rent_id";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function createRentMessage($rent_id, $sender_id, $receiver_id, $message, $status)
+    {
+        $sql = "INSERT INTO rent_messages(rent_id,sender_id,receiver_id,message,status) VALUES($rent_id,'$sender_id','$receiver_id','$message',$status)";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function getSingleRentalAdmessages($rent_id, $sender_id)
+    {
+        $sql = " SELECT * FROM `rent_messages` WHERE rent_id = $rent_id AND sender_id='$sender_id' OR receiver_id='$sender_id'";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function createQueryMessage($query_id, $sender_id, $receiver_id, $message, $status)
+    {
+        $sql = "INSERT INTO query_messages(query_id,sender_id,receiver_id,message,status) VALUES($query_id,'$sender_id','$receiver_id','$message',$status)";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function getSingleQueryAdMessages($query_id, $sender_id)
+    {
+        $sql = " SELECT * FROM query_messages WHERE query_id = $query_id AND sender_id='$sender_id' OR receiver_id='$sender_id'";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function createWishList($rent_id, $user_id)
+    {
+        $sql = "INSERT INTO wishlist(user_id, rent_id) VALUES ('$user_id',$rent_id)";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function getFullWishList($user_id)
+    {
+        $sql = "SELECT * FROM wishlist WHERE user_id='$user_id'";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public  function getRentTypes(){
+        $sql = "SELECT * FROM rent_types";
         $result = $this->conn->query($sql);
         if ($result) {
             return $result;

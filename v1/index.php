@@ -204,14 +204,13 @@ $app->get('/rents', function () {
     }
 
 
-
     echoRespnse(200, $response);
 });
 
 /**
- * Listing all tasks of particual user
+ * Retrive specific Rental ad for detail View
  * method GET
- * url /tasks
+ * url /rents/:rent_id
  */
 $app->get('/rents/:rent_id', function ($rent_id) {
     $response = array();
@@ -229,6 +228,7 @@ $app->get('/rents/:rent_id', function ($rent_id) {
         $tmp["id"] = $task["id"];
         $tmp["user_id"] = $task["user_id"];
         $tmp["area_id"] = $task["area_id"];
+
         $tmp["rentprice"] = $task["rentprice"];
         array_push($response["rents"], $tmp);
     }
@@ -267,11 +267,40 @@ $app->post('/reviews', function () use ($app) {
     }
 });
 
+/**
+ * Create a review for rental AD
+ * method PUT
+ * url /reviews
+ */
+$app->put('/reviews/:review_id', function ($review_id) use ($app) {
+    // check for required params
+    verifyRequiredParams(array('rating', 'review'));
+
+    $response = array();
+
+    // reading post params
+    $ratings = $app->request->post('rating');
+    $reviews = $app->request->post('review');
+
+    $db = new DbHandler();
+    $res = $db->updateRentalAdReviews($review_id, $ratings, $reviews);
+
+    if ($res) {
+        $response["error"] = false;
+        $response["message"] = "Review is added Successfully";
+        echoRespnse(201, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while adding review";
+        echoRespnse(200, $response);
+    }
+});
+
 
 /**
- * Listing all tasks of particual user
+ * Listing all reviews of particular rental ad
  * method GET
- * url /tasks
+ * url /reviews/:rent_id
  */
 $app->get('/reviews/:rent_id', function ($rent_id) {
     $response = array();
@@ -301,6 +330,247 @@ $app->get('/reviews/:rent_id', function ($rent_id) {
 
     echoRespnse(200, $response);
 });
+
+/**
+ * Create and Add to wishlist
+ * method POST
+ * url /wishlist
+ */
+$app->post('/wishlist', function () use ($app) {
+    // check for required params
+    verifyRequiredParams(array('rent_id', 'user_id'));
+
+    $response = array();
+
+    // reading post params
+    $user_id = $app->request->post('user_id');
+    $rent_id = $app->request->post('rent_id');
+
+    $db = new DbHandler();
+    $res = $db->createWishList($rent_id,$user_id);
+
+    if ($res) {
+        $response["error"] = false;
+        $response["message"] = "Added To Wishlist Successfully";
+        echoRespnse(201, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while adding review";
+        echoRespnse(200, $response);
+    }
+});
+
+
+/**
+ * Listing all wishlist of a particuler user
+ * method GET
+ * url /wishlist/:user_id
+ */
+$app->get('/wishlist/:user_id', function ($user_id) {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getFullWishList($user_id);
+
+    if ($result->num_rows > 0) {
+        $response["error"] = false;
+        $response["wishlist"] = array();
+
+        // looping through result and preparing tasks array
+        while ($task = $result->fetch_assoc()) {
+            $tmp = array();
+            $tmp["id"] = $task["id"];
+            $tmp["user_id"] = $task["user_id"];
+            $tmp["rent_id"] = $task["rent_id"];
+            array_push($response["wishlist"], $tmp);
+        }
+    } else {
+        $response["error"] = true;
+        $response["wishlist"] = array();
+    }
+
+    echoRespnse(200, $response);
+});
+
+/**
+ * Send message to rental AD owner
+ * method POST
+ * url /rmessages
+ */
+$app->post('/rmessages', function () use ($app) {
+    // check for required params
+    verifyRequiredParams(array('rent_id', 'sender_id', 'receiver_id', 'message', 'status'));
+
+    $response = array();
+
+    // reading post params
+    $rent_id = $app->request->post('rent_id');
+    $sender_id = $app->request->post('sender_id');
+    $receiver_id = $app->request->post('receiver_id');
+    $message = $app->request->post('message');
+    $status = $app->request->post('status');
+
+    $db = new DbHandler();
+    $res = $db->createRentMessage($rent_id,$sender_id, $receiver_id,$message,$status);
+
+    if ($res) {
+        $response["error"] = false;
+        $response["message"] = "Review is added Successfully";
+        echoRespnse(201, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while adding review";
+        echoRespnse(200, $response);
+    }
+});
+
+/**
+ * retriev messages of particular rental ad and user
+ * method POST
+ * url /rmessages/conv
+ */
+$app->post('/rmessages/conv', function () use ($app) {
+
+    verifyRequiredParams(array('rent_id','sender_id'));
+    $response = array();
+    $db = new DbHandler();
+
+    $rent_id = $app->request->post('rent_id');
+    $sender_id = $app->request->post('sender_id');
+
+    // fetching all user tasks
+    $result = $db->getSingleRentalAdmessages($rent_id,$sender_id);
+
+    if ($result->num_rows > 0) {
+        $response["error"] = false;
+        $response["rmessages"] = array();
+
+        // looping through result and preparing tasks array
+        while ($task = $result->fetch_assoc()) {
+            $tmp = array();
+            $tmp["id"] = $task["id"];
+            $tmp["rent_id"] = $task["rent_id"];
+            $tmp["sender_id"] = $task["sender_id"];
+            $tmp["receiver_id"] = $task["receiver_id"];
+            $tmp["message"] = $task["message"];
+            $tmp["status"] = $task["status"];
+            $tmp["time"] = $task["time"];
+            array_push($response["rmessages"], $tmp);
+        }
+    } else {
+        $response["error"] = true;
+        $response["rmessages"] = array();
+    }
+
+    echoRespnse(200, $response);
+});
+
+/**
+ * Send message to Query AD owner
+ * method POST
+ * url /qmessages
+ */
+$app->post('/qmessages', function () use ($app) {
+    // check for required params
+    verifyRequiredParams(array('query_id', 'sender_id', 'receiver_id', 'message', 'status'));
+
+    $response = array();
+
+    // reading post params
+    $query_id = $app->request->post('query_id');
+    $sender_id = $app->request->post('sender_id');
+    $receiver_id = $app->request->post('receiver_id');
+    $message = $app->request->post('message');
+    $status = $app->request->post('status');
+
+    $db = new DbHandler();
+    $res = $db->createQueryMessage($query_id,$sender_id, $receiver_id,$message,$status);
+
+    if ($res) {
+        $response["error"] = false;
+        $response["message"] = "Review is added Successfully";
+        echoRespnse(201, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while adding review";
+        echoRespnse(200, $response);
+    }
+});
+
+/**
+ * retriev messages of particular query ad and user
+ * method POST
+ * url /qmessages/conv
+ */
+$app->post('/qmessages/conv', function () use ($app) {
+
+    verifyRequiredParams(array('query_id','sender_id'));
+    $response = array();
+    $db = new DbHandler();
+
+    $query_id = $app->request->post('query_id');
+    $sender_id = $app->request->post('sender_id');
+
+    // fetching all user tasks
+    $result = $db->getSingleQueryAdMessages($query_id,$sender_id);
+
+    if ($result->num_rows > 0) {
+        $response["error"] = false;
+        $response["qmessages"] = array();
+
+        // looping through result and preparing tasks array
+        while ($task = $result->fetch_assoc()) {
+            $tmp = array();
+            $tmp["id"] = $task["id"];
+            $tmp["query_id"] = $task["query_id"];
+            $tmp["sender_id"] = $task["sender_id"];
+            $tmp["receiver_id"] = $task["receiver_id"];
+            $tmp["message"] = $task["message"];
+            $tmp["status"] = $task["status"];
+            $tmp["time"] = $task["time"];
+            array_push($response["qmessages"], $tmp);
+        }
+    } else {
+        $response["error"] = true;
+        $response["qmessages"] = array();
+    }
+
+    echoRespnse(200, $response);
+});
+
+
+/**
+ * Listing all wishlist of a particuler user
+ * method GET
+ * url /rtype
+ */
+$app->get('/rtype', function () {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getRentTypes();
+
+    if ($result->num_rows > 0) {
+        $response["error"] = false;
+        $response["types"] = array();
+
+        // looping through result and preparing tasks array
+        while ($task = $result->fetch_assoc()) {
+            $tmp = array();
+            $tmp["id"] = $task["id"];
+            $tmp["type"] = $task["type"];
+            array_push($response["types"], $tmp);
+        }
+    } else {
+        $response["error"] = true;
+        $response["types"] = array();
+    }
+
+    echoRespnse(200, $response);
+});
+
 
 
 /**
