@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="780c5e17-f336-456b-9ebc-2cc9af0b928e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/DbHandler.php" afterPath="$PROJECT_DIR$/include/DbHandler.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/v1/index.php" afterPath="$PROJECT_DIR$/v1/index.php" />
@@ -20,48 +19,52 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DbHandler.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DbHandler.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="302" column="27" lean-forward="true" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+            <state relative-caret-position="104">
+              <caret line="138" column="42" lean-forward="false" selection-start-line="138" selection-start-column="42" selection-end-line="138" selection-end-column="42" />
               <folding>
-                <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-                <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-                <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-                <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-                <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-                <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-                <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-                <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-                <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-                <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-                <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-                <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-                <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-                <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-                <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-                <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-                <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-                <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-                <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-                <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-                <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-                <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-                <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-                <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-                <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-                <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+                <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+                <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+                <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+                <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+                <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+                <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+                <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+                <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+                <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+                <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+                <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+                <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+                <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+                <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+                <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+                <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+                <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+                <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+                <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+                <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+                <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+                <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+                <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+                <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+                <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+                <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+                <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+                <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+                <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+                <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="230" column="8" lean-forward="false" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
+            <state relative-caret-position="176">
+              <caret line="285" column="39" lean-forward="true" selection-start-line="285" selection-start-column="39" selection-end-line="285" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -74,6 +77,8 @@
       <find>qme</find>
       <find>type</find>
       <find>rent</find>
+      <find>creater</find>
+      <find>/rent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,8 +90,9 @@
         <option value="$PROJECT_DIR$/v1/.htaccess" />
         <option value="$PROJECT_DIR$/include/DbConnect.php" />
         <option value="$PROJECT_DIR$/include/Config.php" />
-        <option value="$PROJECT_DIR$/include/DbHandler.php" />
+        <option value="$PROJECT_DIR$/../time/index.php" />
         <option value="$PROJECT_DIR$/v1/index.php" />
+        <option value="$PROJECT_DIR$/include/DbHandler.php" />
       </list>
     </option>
   </component>
@@ -123,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -185,6 +190,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,12 +295,14 @@
       <workItem from="1483897359623" duration="3451000" />
       <workItem from="1483985567619" duration="594000" />
       <workItem from="1484047093340" duration="1807000" />
-      <workItem from="1484055249068" duration="4302000" />
+      <workItem from="1484055249068" duration="4989000" />
+      <workItem from="1484116826699" duration="88000" />
+      <workItem from="1484254990174" duration="6350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42485000" />
+    <option name="totallyTimeSpent" value="49610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -305,8 +313,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.100605145" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10363086" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -318,6 +326,25 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1580938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10363086" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -332,35 +359,133 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5134">
+          <caret line="302" column="27" lean-forward="false" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding>
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5134">
+          <caret line="302" column="27" lean-forward="false" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding>
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4522">
           <caret line="266" column="5" lean-forward="true" selection-start-line="266" selection-start-column="5" selection-end-line="266" selection-end-column="5" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -378,32 +503,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -421,32 +550,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -464,32 +597,36 @@
         <state relative-caret-position="3587">
           <caret line="211" column="90" lean-forward="true" selection-start-line="211" selection-start-column="90" selection-end-line="211" selection-end-column="90" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -507,32 +644,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -557,32 +698,36 @@
         <state relative-caret-position="3621">
           <caret line="213" column="45" lean-forward="false" selection-start-line="213" selection-start-column="45" selection-end-line="213" selection-end-column="45" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -600,32 +745,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -643,32 +792,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -686,32 +839,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
           </folding>
         </state>
       </provider>
@@ -727,9 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,59 +927,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/Config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
+    <entry file="file://$PROJECT_DIR$/../time/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="302" column="27" lean-forward="true" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+        <state relative-caret-position="102">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="44" />
           <folding>
-            <marker date="1484062698989" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
-            <marker date="1484062698989" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
-            <marker date="1484062698989" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
-            <marker date="1484062698989" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
-            <marker date="1484062698989" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="4041:4562" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="4815:5068" ph="SELECT id,ba... " />
-            <marker date="1484062698989" expanded="true" signature="5298:5329" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5298:5330" ph="SELECT * FRO... rents" />
-            <marker date="1484062698989" expanded="true" signature="5765:6303" ph="INSERT INTO rents... " />
-            <marker date="1484062698989" expanded="true" signature="6600:6697" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7009" ph="INSERT INTO reviews... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7010" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="6948:7011" ph="UPDATE revie... " />
-            <marker date="1484062698989" expanded="true" signature="7255:7294" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7574:7709" ph="INSERT INTO rent_messages... " />
-            <marker date="1484062698989" expanded="true" signature="7957:7971" ph="SELECT * FRO... reviews" />
-            <marker date="1484062698989" expanded="true" signature="7957:8066" ph="SELECT * FRO... rent_messages" />
-            <marker date="1484062698989" expanded="true" signature="8340:8478" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="8726:8836" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9070:9137" ph="INSERT INTO query_messages... " />
-            <marker date="1484062698989" expanded="true" signature="9362:9409" ph="SELECT * FRO... wishlist" />
-            <marker date="1484062698989" expanded="true" signature="9408:9409" ph="SELECT * FRO... query_messages" />
-            <marker date="1484062698989" expanded="true" signature="9619:9643" ph="SELECT * FRO... wishlist" />
+            <marker date="1484259473652" expanded="true" signature="255:317" ph="INSERT INTO `test`... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="66" column="72" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="72" />
+          <folding>
+            <marker date="1473133762000" expanded="true" signature="2644:2669" ph="SELECT * FRO... countries" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../time/db-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/db-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/v1/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="230" column="8" lean-forward="false" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
+        <state relative-caret-position="176">
+          <caret line="285" column="39" lean-forward="true" selection-start-line="285" selection-start-column="39" selection-end-line="285" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DbHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="138" column="42" lean-forward="false" selection-start-line="138" selection-start-column="42" selection-end-line="138" selection-end-column="42" />
+          <folding>
+            <marker date="1484261520824" expanded="true" signature="1072:1195" ph="INSERT INTO users... " />
+            <marker date="1484261520824" expanded="true" signature="2148:2184" ph="SELECT id fr... users" />
+            <marker date="1484261520824" expanded="true" signature="2558:2626" ph="SELECT user_... users" />
+            <marker date="1484261520824" expanded="true" signature="3064:3101" ph="SELECT * FRO... users" />
+            <marker date="1484261520824" expanded="true" signature="3508:3545" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3546" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3508:3554" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="3786:3839" ph="SELECT * FRO... rent_queries" />
+            <marker date="1484261520824" expanded="true" signature="4470:4913" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="5166:5419" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="5649:5680" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="5649:5681" ph="SELECT * FRO... rents" />
+            <marker date="1484261520824" expanded="true" signature="6116:6654" ph="INSERT INTO rents... " />
+            <marker date="1484261520824" expanded="true" signature="6951:7048" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7360" ph="INSERT INTO reviews... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7361" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7299:7362" ph="UPDATE revie... " />
+            <marker date="1484261520824" expanded="true" signature="7606:7645" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="7925:8060" ph="INSERT INTO rent_messages... " />
+            <marker date="1484261520824" expanded="true" signature="8308:8322" ph="SELECT * FRO... reviews" />
+            <marker date="1484261520824" expanded="true" signature="8308:8417" ph="SELECT * FRO... rent_messages" />
+            <marker date="1484261520824" expanded="true" signature="8688:8826" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="9041:9294" ph="SELECT id,ba... " />
+            <marker date="1484261520824" expanded="true" signature="9537:9647" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="9921:10059" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10307:10417" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="10651:10718" ph="INSERT INTO query_messages... " />
+            <marker date="1484261520824" expanded="true" signature="10943:10990" ph="SELECT * FRO... wishlist" />
+            <marker date="1484261520824" expanded="true" signature="10989:10990" ph="SELECT * FRO... query_messages" />
+            <marker date="1484261520824" expanded="true" signature="11200:11224" ph="SELECT * FRO... wishlist" />
+          </folding>
         </state>
       </provider>
     </entry>

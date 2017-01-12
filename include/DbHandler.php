@@ -130,20 +130,33 @@ class DbHandler
         return $tasks;
     }
 
+/**
+     * Fetching all user tasks
+     * @param String $user_id id of the user
+     */
+    public function getAllUserQuery($user_id)
+    {
+        $sql = "SELECT * FROM rent_queries WHERE user_id = '$user_id'";
+        $tasks = $this->conn->query($sql);
+        return $tasks;
+    }
+
 
     /**
      * Creating new rent
      * @param String $user_id user id to whom task belongs to
      * @param String $task task text
      */
-    public function createRentalAd($user_id, $area_id, $city_id, $banner, $beds, $baths, $floorDetails, $lift, $parking, $rentPrice,
-                                   $rentDetails, $location, $Address, $img_banner, $img_other_one, $img_other_two)
+    public function createRentalAd($user_id,$area_id,$rent_type_id,$banner,$beds,$baths,$size,$floordetails,$lift,$parking,
+                                   $rentprice,$rentdetails,$address,$geoloc_lat,$geoloc_lng,$available_date,$img_banner,$img_other_one,$img_other_two)
     {
-        $sql = "INSERT INTO rents(user_id,area_id,banner,beds,baths,floorDeatils,lift,
-                                                  parking,rentPrice,rentDetails,location,Address,img_banner,img_other_one,img_other_two) 
-                                                  VALUES($user_id,$area_id,$banner,$beds,$baths,$floorDetails,
-                                                  $lift,$parking,$rentPrice,$rentDetails,$location,$Address,$img_banner,
-                                                  $img_other_one,$img_other_two)";
+
+        $date = DateTime::createFromFormat('Y-m-d', $available_date);
+        $available = $date->format('Y-m-d');
+
+        $sql = "INSERT INTO rents (user_id, area_id, rent_type_id, banner, beds, baths, size, floordetails, lift, parking, 
+rentprice, rentdetails, address, geoloc_lat, geoloc_lng, available, img_banner, img_other_one, img_other_two) 
+VALUES('$user_id',$area_id,$rent_type_id,'$banner',$beds,$baths,$size,'$floordetails',$lift,$parking, $rentprice,'$rentdetails','$address',$geoloc_lat,$geoloc_lng,'$available','$img_banner','$img_other_one','$img_other_two')";
 
         $result = $this->conn->query($sql);
 
@@ -244,6 +257,40 @@ FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) 
     public function getSingleRentalAdmessages($rent_id, $sender_id)
     {
         $sql = " SELECT * FROM `rent_messages` WHERE rent_id = $rent_id AND sender_id='$sender_id' OR receiver_id='$sender_id'";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function createQueryPost($query_id, $sender_id, $receiver_id, $message, $status)
+    {
+        $sql = "INSERT INTO query_messages(query_id,sender_id,receiver_id,message,status) VALUES($query_id,'$sender_id','$receiver_id','$message',$status)";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function getQueryPosts()
+    {
+        $sql = "SELECT id,banner,area_id,rent_type_id,beds,size,rentprice,available,avgrating,reviews,img_banner 
+FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) as reviews FROM `reviews` GROUP BY rents_id)AS t2 ON rents.id = t2.rents_id ";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return $result;
+        } else {
+            return NULL;
+        }
+    }
+
+    public function getSingleQueryPost($query_id, $sender_id)
+    {
+        $sql = " SELECT * FROM query_messages WHERE query_id = $query_id AND sender_id='$sender_id' OR receiver_id='$sender_id'";
         $result = $this->conn->query($sql);
         if ($result) {
             return $result;

@@ -170,6 +170,58 @@ $app->get('/userrents/:user_id', function ($user_id) {
     echoRespnse(200, $response);
 });
 
+
+/**
+ * User Registration
+ * url - /register
+ * method - POST
+ * params - name, email, password
+ */
+$app->post('/rents', function () use ($app) {
+    // check for required params
+    verifyRequiredParams(array('user_id', 'area_id', 'rent_type_id', 'banner', 'beds', 'baths', 'size', 'floordetails', 'lift',
+        'parking', 'rentprice', 'rentdetails', 'address', 'geoloc_lat', 'geoloc_lng', 'available', 'img_banner', 'img_other_one', 'img_other_two'));
+
+    $response = array();
+
+    // reading post params
+    $user_id = $app->request->post('user_id');
+    $area_id = $app->request->post('area_id');
+    $rent_type_id = $app->request->post('rent_type_id');
+    $banner = $app->request->post('banner');
+    $beds = $app->request->post('beds');
+    $baths = $app->request->post('baths');
+    $size = $app->request->post('size');
+    $floordetails = $app->request->post('floordetails');
+    $lift = $app->request->post('lift');
+    $parking = $app->request->post('parking');
+    $rentprice = $app->request->post('rentprice');
+    $rentdetails = $app->request->post('rentdetails');
+    $address = $app->request->post('address');
+    $geoloc_lat = $app->request->post('geoloc_lat');
+    $geoloc_lng = $app->request->post('geoloc_lng');
+    $available = $app->request->post('available');
+    $img_banner = $app->request->post('img_banner');
+    $img_other_one = $app->request->post('img_other_one');
+    $img_other_two = $app->request->post('img_other_two');
+
+
+    $db = new DbHandler();
+    $res = $db->createRentalAd($user_id, $area_id, $rent_type_id, $banner, $beds, $baths, $size, $floordetails, $lift, $parking,
+        $rentprice, $rentdetails, $address, $geoloc_lat, $geoloc_lng, $available, $img_banner, $img_other_one, $img_other_two);
+
+    if ($res) {
+        $response["error"] = false;
+        $response["message"] = "You are successfully registered";
+        echoRespnse(201, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while registereing";
+        echoRespnse(200, $response);
+    }
+});
+
+
 /**
  * Listing all tasks of particual user
  * method GET
@@ -228,8 +280,24 @@ $app->get('/rents/:rent_id', function ($rent_id) {
         $tmp["id"] = $task["id"];
         $tmp["user_id"] = $task["user_id"];
         $tmp["area_id"] = $task["area_id"];
-
+        $tmp["rent_type_id"] = $task["rent_type_id"];
+        $tmp["banner"] = $task["banner"];
+        $tmp["beds"] = $task["beds"];
+        $tmp["baths"] = $task["baths"];
+        $tmp["size"] = $task["size"];
+        $tmp["flordetails"] = $task["floordetails"];
+        $tmp["lift"] = $task["lift"];
+        $tmp["parking"] = $task["parking"];
         $tmp["rentprice"] = $task["rentprice"];
+        $tmp["rentdetails"] = $task["rentdetails"];
+        $tmp["address"] = $task["address"];
+        $tmp["geoloc_lat"] = $task["geoloc_lat"];
+        $tmp["geoloc_lng"] = $task["geoloc_lng"];
+        $tmp["available"] = $task["available"];
+        $tmp["img_banner"] = $task["img_banner"];
+        $tmp["img_other_one"] = $task["img_other_one"];
+        $tmp["img_other_two"] = $task["img_other_two"];
+        $tmp["created_at"] = $task["created_at"];
         array_push($response["rents"], $tmp);
     }
 
@@ -347,7 +415,7 @@ $app->post('/wishlist', function () use ($app) {
     $rent_id = $app->request->post('rent_id');
 
     $db = new DbHandler();
-    $res = $db->createWishList($rent_id,$user_id);
+    $res = $db->createWishList($rent_id, $user_id);
 
     if ($res) {
         $response["error"] = false;
@@ -412,7 +480,7 @@ $app->post('/rmessages', function () use ($app) {
     $status = $app->request->post('status');
 
     $db = new DbHandler();
-    $res = $db->createRentMessage($rent_id,$sender_id, $receiver_id,$message,$status);
+    $res = $db->createRentMessage($rent_id, $sender_id, $receiver_id, $message, $status);
 
     if ($res) {
         $response["error"] = false;
@@ -432,7 +500,7 @@ $app->post('/rmessages', function () use ($app) {
  */
 $app->post('/rmessages/conv', function () use ($app) {
 
-    verifyRequiredParams(array('rent_id','sender_id'));
+    verifyRequiredParams(array('rent_id', 'sender_id'));
     $response = array();
     $db = new DbHandler();
 
@@ -440,7 +508,7 @@ $app->post('/rmessages/conv', function () use ($app) {
     $sender_id = $app->request->post('sender_id');
 
     // fetching all user tasks
-    $result = $db->getSingleRentalAdmessages($rent_id,$sender_id);
+    $result = $db->getSingleRentalAdmessages($rent_id, $sender_id);
 
     if ($result->num_rows > 0) {
         $response["error"] = false;
@@ -485,7 +553,7 @@ $app->post('/qmessages', function () use ($app) {
     $status = $app->request->post('status');
 
     $db = new DbHandler();
-    $res = $db->createQueryMessage($query_id,$sender_id, $receiver_id,$message,$status);
+    $res = $db->createQueryMessage($query_id, $sender_id, $receiver_id, $message, $status);
 
     if ($res) {
         $response["error"] = false;
@@ -505,7 +573,7 @@ $app->post('/qmessages', function () use ($app) {
  */
 $app->post('/qmessages/conv', function () use ($app) {
 
-    verifyRequiredParams(array('query_id','sender_id'));
+    verifyRequiredParams(array('query_id', 'sender_id'));
     $response = array();
     $db = new DbHandler();
 
@@ -513,7 +581,7 @@ $app->post('/qmessages/conv', function () use ($app) {
     $sender_id = $app->request->post('sender_id');
 
     // fetching all user tasks
-    $result = $db->getSingleQueryAdMessages($query_id,$sender_id);
+    $result = $db->getSingleQueryAdMessages($query_id, $sender_id);
 
     if ($result->num_rows > 0) {
         $response["error"] = false;
@@ -570,7 +638,6 @@ $app->get('/rtype', function () {
 
     echoRespnse(200, $response);
 });
-
 
 
 /**
