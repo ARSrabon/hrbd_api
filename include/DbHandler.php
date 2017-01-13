@@ -130,7 +130,7 @@ class DbHandler
         return $tasks;
     }
 
-/**
+    /**
      * Fetching all user tasks
      * @param String $user_id id of the user
      */
@@ -147,8 +147,8 @@ class DbHandler
      * @param String $user_id user id to whom task belongs to
      * @param String $task task text
      */
-    public function createRentalAd($user_id,$area_id,$rent_type_id,$banner,$beds,$baths,$size,$floordetails,$lift,$parking,
-                                   $rentprice,$rentdetails,$address,$geoloc_lat,$geoloc_lng,$available_date,$img_banner,$img_other_one,$img_other_two)
+    public function createRentalAd($user_id, $area_id, $rent_type_id, $banner, $beds, $baths, $size, $floordetails, $lift, $parking,
+                                   $rentprice, $rentdetails, $address, $geoloc_lat, $geoloc_lng, $available_date, $img_banner, $img_other_one, $img_other_two)
     {
 
         $date = DateTime::createFromFormat('Y-m-d', $available_date);
@@ -265,9 +265,11 @@ FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) 
         }
     }
 
-    public function createQueryPost($query_id, $sender_id, $receiver_id, $message, $status)
+    public function createQueryPost($user_id, $area_id, $rent_type_id, $banner, $beds, $baths, $lift, $parking, $others, $rentprice_range, $validity_str)
     {
-        $sql = "INSERT INTO query_messages(query_id,sender_id,receiver_id,message,status) VALUES($query_id,'$sender_id','$receiver_id','$message',$status)";
+        $date = DateTime::createFromFormat('Y-m-d', $validity_str);
+        $validity = $date->format('Y-m-d');
+        $sql = "INSERT INTO rent_queries(user_id, area_id, rent_type_id, banner, beds, baths, lift, parking, others, rentprice_range, validity)VALUES('$user_id',$area_id,$rent_type_id,'$banner',$beds,$baths,$lift,$parking,'$others','$rentprice_range','$validity')";
         $result = $this->conn->query($sql);
         if ($result) {
             return $result;
@@ -278,8 +280,7 @@ FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) 
 
     public function getQueryPosts()
     {
-        $sql = "SELECT id,banner,area_id,rent_type_id,beds,size,rentprice,available,avgrating,reviews,img_banner 
-FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) as reviews FROM `reviews` GROUP BY rents_id)AS t2 ON rents.id = t2.rents_id ";
+        $sql = "SELECT * FROM rent_queries";
         $result = $this->conn->query($sql);
         if ($result) {
             return $result;
@@ -288,9 +289,9 @@ FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) 
         }
     }
 
-    public function getSingleQueryPost($query_id, $sender_id)
+    public function getSingleQueryPost($query_id)
     {
-        $sql = " SELECT * FROM query_messages WHERE query_id = $query_id AND sender_id='$sender_id' OR receiver_id='$sender_id'";
+        $sql = " SELECT * FROM rent_queries WHERE id = $query_id";
         $result = $this->conn->query($sql);
         if ($result) {
             return $result;
@@ -343,7 +344,8 @@ FROM rents INNER JOIN (SELECT rents_id,AVG(rating) as avgrating,COUNT(rents_id) 
         }
     }
 
-    public  function getRentTypes(){
+    public function getRentTypes()
+    {
         $sql = "SELECT * FROM rent_types";
         $result = $this->conn->query($sql);
         if ($result) {

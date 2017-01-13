@@ -305,6 +305,117 @@ $app->get('/rents/:rent_id', function ($rent_id) {
 });
 
 /**
+ * User Rent Query
+ * url - /rent_query
+ * method - POST
+ * params - name, email, password
+ */
+$app->post('/rent_query', function () use ($app) {
+    // check for required params
+    verifyRequiredParams(array('user_id', 'area_id', 'rent_type_id', 'banner', 'beds', 'baths', 'lift',
+        'parking', 'others', 'rentprice_range', 'validity'));
+
+    $response = array();
+
+    // reading post params
+    $user_id = $app->request->post('user_id');
+    $area_id = $app->request->post('area_id');
+    $rent_type_id = $app->request->post('rent_type_id');
+    $banner = $app->request->post('banner');
+    $beds = $app->request->post('beds');
+    $baths = $app->request->post('baths');
+    $lift = $app->request->post('lift');
+    $parking = $app->request->post('parking');
+    $others = $app->request->post('others');
+    $rentprice_range = $app->request->post('rentprice_range');
+    $validity = $app->request->post('validity');
+
+    $db = new DbHandler();
+    $res = $db->createQueryPost($user_id, $area_id, $rent_type_id, $banner, $beds, $baths, $lift, $parking, $others, $rentprice_range, $validity);
+
+    if ($res) {
+        $response["error"] = false;
+        $response["message"] = "You are successfully registered";
+        echoRespnse(201, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while registereing";
+        echoRespnse(200, $response);
+    }
+});
+
+
+/**
+ * Listing all tasks of particual user
+ * method GET
+ * url /tasks
+ */
+$app->get('/rent_query', function () {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getQueryPosts();
+
+    $response["error"] = false;
+    $response["rent_query_post"] = array();
+
+//    array_push($response["rents"], $result);
+
+//     looping through result and preparing tasks array
+    while ($task = $result->fetch_assoc()) {
+        $tmp = array();
+        $tmp["id"] = $task["id"];
+        $tmp["area_id"] = $task["area_id"];
+        $tmp["rent_type_id"] = $task["rent_type_id"];
+        $tmp["banner"] = $task["banner"];
+        $tmp["beds"] = $task["beds"];
+        $tmp["validity"] = $task["validity"];
+        array_push($response["rent_query_post"], $tmp);
+    }
+
+
+    echoRespnse(200, $response);
+});
+
+/**
+ * Retrive specific Rental ad for detail View
+ * method GET
+ * url /rents/:rent_id
+ */
+$app->get('/rent_query/:query_id', function ($query_id) {
+    $response = array();
+    $db = new DbHandler();
+
+    // fetching all user tasks
+    $result = $db->getSingleQueryPost($query_id);
+
+    $response["error"] = false;
+    $response["rent_query_post"] = array();
+
+    // looping through result and preparing tasks array
+    while ($task = $result->fetch_assoc()) {
+        $tmp = array();
+        $tmp["id"] = $task["id"];
+        $tmp["user_id"] = $task["user_id"];
+        $tmp["area_id"] = $task["area_id"];
+        $tmp["rent_type_id"] = $task["rent_type_id"];
+        $tmp["banner"] = $task["banner"];
+        $tmp["beds"] = $task["beds"];
+        $tmp["baths"] = $task["baths"];
+        $tmp["lift"] = $task["lift"];
+        $tmp["parking"] = $task["parking"];
+        $tmp["others"] = $task["others"];
+        $tmp["rentprice_range"] = $task["rentprice_range"];
+        $tmp["validity"] = $task["validity"];
+        $tmp["posted_at"] = $task["posted_at"];
+        array_push($response["rent_query_post"], $tmp);
+    }
+
+    echoRespnse(200, $response);
+});
+
+/**
  * Create a review for rental AD
  * method POST
  * url /reviews
